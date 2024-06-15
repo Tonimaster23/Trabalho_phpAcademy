@@ -22,15 +22,17 @@ $exercicios = getExercicios($conn, $user_id);
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <h1>Seus Exercícios</h1>
-    <ul>
-        <?php foreach ($exercicios as $exercicio): ?>
-            <li>
-                <strong><?php echo htmlspecialchars($exercicio['nome_exercicio'], ENT_QUOTES, 'UTF-8'); ?>:</strong>
-                <?php echo htmlspecialchars($exercicio['descricao'], ENT_QUOTES, 'UTF-8'); ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    <a href="logout.php">Logout</a>
+    <div class="container">
+        <h1>Seus Exercícios</h1>
+        <ul>
+            <?php foreach ($exercicios as $exercicio): ?>
+                <li>
+                    <strong><?php echo htmlspecialchars($exercicio['nome_exercicio'], ENT_QUOTES, 'UTF-8'); ?>:</strong>
+                    <?php echo htmlspecialchars($exercicio['descricao'], ENT_QUOTES, 'UTF-8'); ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <a href="logout.php">Logout</a>
+    </div>
 </body>
 </html>
